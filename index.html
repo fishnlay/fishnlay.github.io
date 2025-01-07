@@ -7,27 +7,43 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;}
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+        }
 
         nav {
             display: flex;
             justify-content: center;
             background-color: black;
             height: 3em;
-            align-items: center;}
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            transform: translateY(0);
+            transition: transform 0.3s;
+        }
+
+        nav.hidden {
+            transform: translateY(-100%);
+        }
 
         nav a {
             color: white;
             text-decoration: none;
             padding: 1em;
-            transition: background-color 0.3s;}
+            transition: background-color 0.3s;
+        }
 
         nav a:hover {
-            background-color: #555;}
+            background-color: #555;
+        }
 
         .main-content {
-            padding: 2em;
-            text-align: center;}
+            padding: 5em 2em 2em; /* Adjust padding to account for the fixed nav */
+            text-align: center;
+        }
 
         .main-content button {
             margin-top: 1em;
@@ -37,20 +53,39 @@
             color: white;
             border: none;
             cursor: pointer;
-            transition: background-color 0.3s;}
-        
+            transition: background-color 0.3s;
+        }
+
         .main-content button:hover {
-            background-color: #555;}
+            background-color: #555;
+        }
 
         footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 1em 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;}
+            margin-top: 3em;
+        }
+
+        .spacer {
+            height: 3em; /* Space before footer */
+        }
     </style>
+    <script>
+        let lastScrollTop = 0;
+        const nav = document.querySelector('nav');
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                nav.classList.add('hidden');
+            } else {
+                nav.classList.remove('hidden');
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+        });
+    </script>
 </head>
 <body>
     <nav>
@@ -61,10 +96,13 @@
     </nav>
 
     <div class="main-content">
-        <h2>Hello, I am Quentin, photography and travel enthusiast.</h2>
-        <button onclick="location.href='collections.html'">View Portfolio</button>
+        <h2>Home</h2>
+        <p>Explore my photography journey through different pages.</p>
         <img src="sample-photo.jpg" alt="Sample Photo" style="width: 80%; max-width: 600px; margin: 1em 0;">
+        <button onclick="location.href='collections.html'">View Portfolio</button>
     </div>
+
+    <div class="spacer"></div>
 
     <footer>
         <p>&copy; 2025 My Photo Gallery. All rights reserved.</p>
