@@ -1,11 +1,17 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    font-family: Tahoma, Arial, sans-serif;
+    background-color: black;
+    color: white;
 }
 
+/* PHOTO GRID*/
 .row {
     display: flex;
     flex-wrap: wrap;
     padding: 0 4px;
+    justify-content: center;
 }
 
 /* Create four equal columns that sits next to each other */
@@ -19,7 +25,10 @@ padding: 0 4px;
 margin-top: 8px;
 vertical-align: middle;
 width: 100%;
-pointer-events: none;
+}
+
+.column img:hover {
+    filter: grayscale(100%); /* Apply black and white effect on hover */
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -38,22 +47,17 @@ pointer-events: none;
 }
 }
 
-body {
-    margin: 0;
-    font-family: Tahoma, Arial, sans-serif;
-    background-color: black;
-    color: white;
-}
-
+/* NAV TABS*/
 nav {
     display: flex;
     justify-content: center;
     background-color: black;
-    height: 3em;
+    height: 5cqw;
     align-items: center;
     position: fixed;
     top: 0;
     width: 100%;
+    font-size: 1.25em;
     transform: translateY(0);
     transition: transform 0.3s;
 }
@@ -76,12 +80,14 @@ nav a:hover {
 .main-content {
     padding: 5em 2em 2em; /* Adjust padding to account for the fixed nav */
     text-align: center;
+    color: white;
+    font-size: 2em;
 }
 
 .main-content button {
     margin-top: 1em;
     padding: 0.5em 1em;
-    font-size: 1em;
+    font-size: 0.5em;
     background-color: black;
     color: white;
     border: none;
