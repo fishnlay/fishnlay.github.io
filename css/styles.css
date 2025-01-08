@@ -78,26 +78,50 @@ nav a:hover {
     background-color: #555;
 }
 
-.main-content {
-    padding: 5em 2em 2em; /* Adjust padding to account for the fixed nav */
+.main-content h1 {
+    font-size: 4vw; /* Adjust size relative to the screen width */
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 20px;
+    padding-top: 100px;
     text-align: center;
-    color: white;
-    font-size: 2em;
 }
 
-.main-content button {
+.main-content .gray {
+    color: gray; /* Set specific lines to gray */
+    justify-content: center;
+}
+
+.main-content .gray_smol {
+    color: rgb(169, 40, 40); /* Set specific lines to gray */
+    justify-content: center;
+    font-size: 2.5vw
+}
+
+.view_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.view_button button {
     margin-top: 1em;
     padding: 0.5em 1em;
-    font-size: 0.5em;
+    font-size: 1vw;
     background-color: black;
     color: white;
-    border: none;
+    border: 0.3px solid white; /* Adds white border around the button */
+    border-radius: 12px; /* Rounds the corners */
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for background and border color */
 }
 
-.main-content button:hover {
-    background-color: #555;
+.view_button button:hover {
+    background-color: white; /* Changes background color on hover */
+    color: black; /* Changes text color on hover */
+    border-color: black; /* Changes border color on hover */
 }
 
 .recent-work{
