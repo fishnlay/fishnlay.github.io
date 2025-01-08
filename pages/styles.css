@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+}
+img {
+    pointer-events: none;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    text-align: center;
+}
+  
+.column {
+    flex: 50%;
+    padding: 0 4px;
+}
+  
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+body {
+    margin: 0;
+    font-family: Tahoma, Arial, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    height: 3em;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transform: translateY(0);
+    transition: transform 0.3s;
+}
+
+nav.hidden {
+    transform: translateY(-100%);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 1em;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+.main-content {
+    padding: 5em 2em 2em; /* Adjust padding to account for the fixed nav */
+    text-align: center;
+}
+
+.main-content button {
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.main-content button:hover {
+    background-color: #555;
+}
+
+.recent-work{
+    background-color: black;
+    justify-content: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 1em;
+    margin-top: 2em;
+}
