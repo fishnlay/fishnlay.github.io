@@ -1,50 +1,17 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    font-family: Arial, sans-serif;
-}
+    font-family: Arial, sans-serif;}
 img {
-    pointer-events: none;
-}
+    pointer-events: none;}
 
-.photo-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    grid-gap: 10px; /* Gap between photos */
-    padding: 20px;
-}
-
-.photo {
+.row {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.photo img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-/* Handle vertical and horizontal photo sizes */
-.photo.vertical {
-    height: 100%; /* Vertical photos take full height */
-}
-
-.photo.horizontal {
-    height: 50%; /* Horizontal photos take half height */
-}
-
-/* Ensure correct photo positioning in grid */
-.photo:nth-child(odd) {
-    grid-row: span 2; /* Odd-numbered photos (p1, p3, p7, etc.) span 2 rows */
-}
-
-.photo:nth-child(even) {
-    grid-row: span 1; /* Even-numbered photos (p2, p4, p6, etc.) span 1 row */
-}
+    flex-wrap: wrap;
+    padding: 0 4px;}
+  
+.column {
+    flex: 50%;
+    padding: 0 4px;}
+  
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;}
