@@ -18,13 +18,14 @@ body {
 .column {
 flex: 25%;
 max-width: 25%;
-padding: 0 4px;
+padding: 0 10px;
 }
 
 .column img {
-margin-top: 8px;
+margin-top: 25px;
 vertical-align: middle;
 width: 100%;
+border-radius: 15px;
 }
 
 .column img:hover {
