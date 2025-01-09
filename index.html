@@ -4,21 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Photo Gallery</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script>
-        let lastScrollTop = 0;
-        const nav = document.querySelector('nav');
-
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrollTop > lastScrollTop) {
-                nav.classList.add('hidden');
-            } else {
-                nav.classList.remove('hidden');
-            }
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-        });
-    </script>
+    <link rel="stylesheet" href="css/intro.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/photo_grid.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/scroller.js"></script>
 </head>
 <body>
     <nav>
@@ -42,29 +32,28 @@
 
     <div class="row">
         <div class="column">
-            <div class="photo horizontal"><img src="photos/P1040276.jpg" alt="Photo 1"></div>
-            <div class="photo horizontal"><img src="photos/P1040218.jpg" alt="Photo 2"></div>
-            <div class="photo vertical"><img src="photos/P1040360.jpg" alt="Photo 3"></div>
-            <div class="photo horizontal"><img src="photos/P1040133.jpg" alt="Photo 4"></div>
+            <div class="photo vertical"><img src="photos/recent/P1040276.jpg" alt="Photo 1"></div>
+            <div class="photo vertical"><img src="photos/recent/P1040218.jpg" alt="Photo 2"></div>
+            <div class="photo vertical"><img src="photos/recent/P1040360.jpg" alt="Photo 3"></div>
+            <div class="photo vertical"><img src="photos/recent/P1040133.jpg" alt="Photo 4"></div>
         </div>
         <div class="column">
-            <div class="photo vertical"><img src="photos/P1040106.jpg" alt="Photo 5"></div>
-            <div class="photo horizontal"><img src="photos/P1040036.jpg" alt="Photo 6"></div>
-            <div class="photo vertical"><img src="photos/P1040029.jpg" alt="Photo 7"></div>
-            <div class="photo horizontal"><img src="photos/P1030903.jpg" alt="Photo 8"></div>
+            <div class="photo horizontal"><img src="photos/recent/P1040106.jpg" alt="Photo 5"></div>
+            <div class="photo horizontal"><img src="photos/recent/P1040036.jpg" alt="Photo 6"></div>
+            <div class="photo vertical"><img src="photos/recent/P1040029.jpg" alt="Photo 7"></div>
+            <div class="photo vertical"><img src="photos/recent/P1030903.jpg" alt="Photo 8"></div>
         </div>
         <div class="column">
-            <div class="photo vertical"><img src="photos/P1030898.jpg" alt="Photo 9"></div>
-            <div class="photo vertical"><img src="photos/P1030687.jpg" alt="Photo 9"></div>
-            <div class="photo vertical"><img src="photos/P1030612.jpg" alt="Photo 9"></div>
-            <div class="photo vertical"><img src="photos/P1030358.jpg" alt="Photo 9"></div>
+            <div class="photo vertical"><img src="photos/recent/P1030898.jpg" alt="Photo 9"></div>
+            <div class="photo vertical"><img src="photos/recent/P1030687.jpg" alt="Photo 9"></div>
+            <div class="photo vertical"><img src="photos/recent/P1030612.jpg" alt="Photo 9"></div>
+            <div class="photo horizontal"><img src="photos/recent/P1030358.jpg" alt="Photo 9"></div>
         </div>
     </div>
-
-    
     <footer>
-        <p>&copy; 2025 My Photo Gallery. All rights reserved.</p>
+        <p>&copy; 2025 All rights reserved.</p>
     </footer>
-<script>src="js/right_click.js"</script>
+    <script src="js/fullscren_img.js"></script>
+    <script src="js/right_click.js"></script>
 </body>
 </html>

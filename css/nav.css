@@ -1,0 +1,30 @@
+/* NAV TABS*/
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    height: 5cqw;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-size: 1.15em;
+    transform: translateY(0);
+    transition: transform 0.3s;
+    border-bottom: 0.01px solid rgb(95, 95, 95);
+}
+
+nav.hidden {
+    transform: translateY(-100%);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 1em;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #555;
+}

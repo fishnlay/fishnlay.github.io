@@ -4,21 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Photo Gallery</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script>
-        let lastScrollTop = 0;
-        const nav = document.querySelector('nav');
-
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrollTop > lastScrollTop) {
-                nav.classList.add('hidden');
-            } else {
-                nav.classList.remove('hidden');
-            }
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-        });
-    </script>
+    <link rel="stylesheet" href="css/intro.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/scroller.js"></script>
+    <script src="js/slider.js"></script>
 </head>
 <body>
     <nav>
@@ -27,25 +18,61 @@
         <a href="gear.html">Gear</a>
         <a href="about.html">About</a>
     </nav>
-
-    <div class="row">
+    <!-- Container for the image gallery -->
+    <div class="container">
+        <!-- Full-width images with number text -->
+        <div class="mySlides">
+        <div class="numbertext">1 / 5</div>
+            <img src="photos/San Francisco/P1030612.jpg" style="width:25%">
+        </div>
+    
+        <div class="mySlides">
+        <div class="numbertext">2 / 5</div>
+            <img src="photos/San Francisco/P1040133.jpg" style="width:25%">
+        </div>
+    
+        <div class="mySlides">
+        <div class="numbertext">3 / 5</div>
+            <img src="photos/San Francisco/P1040218.jpg" style="width:25%">
+        </div>
+    
+        <div class="mySlides">
+        <div class="numbertext">4 / 5</div>
+            <img src="photos/San Francisco/P1040276.jpg" style="width:25%">
+        </div>
+    
+        <div class="mySlides">
+        <div class="numbertext">5 / 5</div>
+            <img src="photos/San Francisco/P1040360.jpg" style="width:25%">
+        </div>
+    
+    
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+        <!-- Image text -->
+        <div class="caption-container">
+        <p id="caption"></p>
+        </div>
+    
+        <!-- Thumbnail images -->
+        <div class="row">
         <div class="column">
-            <div class="photo horizontal"><img src="photos/P1040276.jpg" alt="Photo 1"></div>
-            <div class="photo horizontal"><img src="photos/P1040218.jpg" alt="Photo 2"></div>
-            <div class="photo vertical"><img src="photos/P1040360.jpg" alt="Photo 3"></div>
-            <div class="photo horizontal"><img src="photos/P1040133.jpg" alt="Photo 4"></div>
+            <img class="demo cursor" src="photos/San Francisco/P1030612.jpg" style="width:100%" onclick="currentSlide(1)" alt="Alamo Square">
         </div>
         <div class="column">
-            <div class="photo vertical"><img src="photos/P1040106.jpg" alt="Photo 5"></div>
-            <div class="photo horizontal"><img src="photos/P1040036.jpg" alt="Photo 6"></div>
-            <div class="photo vertical"><img src="photos/P1040029.jpg" alt="Photo 7"></div>
-            <div class="photo horizontal"><img src="photos/P1030903.jpg" alt="Photo 8"></div>
+            <img class="demo cursor" src="photos/San Francisco/P1040133.jpg" style="width:100%" onclick="currentSlide(2)" alt="Ocean Beach">
         </div>
         <div class="column">
-            <div class="photo vertical"><img src="photos/P1030898.jpg" alt="Photo 9"></div>
-            <div class="photo vertical"><img src="photos/P1030687.jpg" alt="Photo 9"></div>
-            <div class="photo vertical"><img src="photos/P1030612.jpg" alt="Photo 9"></div>
-            <div class="photo vertical"><img src="photos/P1030358.jpg" alt="Photo 9"></div>
+            <img class="demo cursor" src="photos/San Francisco/P1040218.jpg" style="width:100%" onclick="currentSlide(3)" alt="California Street">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="photos/San Francisco/P1040276.jpg" style="width:100%" onclick="currentSlide(4)" alt="Fisherman">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="photos/San Francisco/P1040360.jpg" style="width:100%" onclick="currentSlide(5)" alt="Global Trade">
+        </div>
         </div>
     </div>
 
